@@ -1,0 +1,180 @@
+
+/* Um bom "reset" para garantir que todos os navegadores comecem do mesmo ponto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333; /* Fundo cinza escuro para a área externa, como no Figma */
+    color: #3d3d3d;
+    /* Alinha o conteúdo principal no centro da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container-homepage {
+    background-color: #A92323; /* Cor vermelha principal do MPPE */
+    color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.header-homepage img {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.main-content h1 {
+    font-size: 1.8em;
+    font-weight: 300; /* Fonte mais leve */
+    margin-bottom: 40px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #A92323; /* Texto dos botões em vermelho */
+    background-color: #ffffff; /* Fundo dos botões em branco */
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent; /* Fundo fica transparente */
+    color: #ffffff; /* Texto fica branco */
+}
+
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    min-height: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo-section {
+    flex: 1; /* Ocupa metade do espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; /* Um cinza bem claro para destacar o brasão */
+    padding: 40px;
+}
+
+.login-logo-section img {
+    max-width: 80%;
+    height: auto;
+}
+
+.login-form-section {
+    flex: 1; /* Ocupa a outra metade */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-form-section h2 {
+    font-size: 2.2em;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.login-form-section h3 {
+    font-size: 1em;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.login-form-section form {
+    width: 100%;
+    max-width: 350px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #A92323; /* Vermelho institucional */
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #8B0000; /* Vermelho mais escuro */
+}
+
+.forgot-password-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+.form-error {
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%;
+}
