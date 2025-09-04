@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usuarios'
+    'usuarios',  # <--- SEU APP REGISTRADO
 ]
 
 MIDDLEWARE = [
@@ -103,12 +103,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# AJUSTADO PARA O BRASIL / PERNAMBUCO
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Recife'
 
 USE_I18N = True
-
 USE_TZ = True
 
 
@@ -117,9 +116,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# A CONFIGURAÇÃO MAIS IMPORTANTE PARA CORRIGIR O CSS
+# Diz ao Django para procurar arquivos estáticos na sua pasta 'frontend/static'
+STATICFILES_DIRS = [
+    BASE_DIR.parent / 'frontend/static',
+]
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = 'pagina_administrativa' # Nome da URL de destino após o login
+
+# REDIRECIONAMENTOS DE LOGIN
+LOGIN_REDIRECT_URL = 'pagina_administrativa'
+LOGOUT_REDIRECT_URL = 'homepage'
