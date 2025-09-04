@@ -1,0 +1,50 @@
+{% comment %}
+    ferramenta do django para encontrar coisas estáticas
+{% endcomment %}
+
+    {% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao DEMPAM</title>
+    
+    {% comment %}
+        Esta linha conecta seu arquivo HTML com o arquivo de estilo CSS.
+        O Django vai procurar por 'css/style.css' dentro da sua pasta 'static'.
+    {% endcomment %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="container-homepage">
+        
+        <header class="header-homepage">
+            {% comment %}
+                Aqui colocamos o logo. Certifique-se de que você exportou a imagem
+                do Figma e a salvou em 'static/images/logo_mppe.png' (ou nome parecido).
+            {% endcomment %}
+            <img src="{% static 'images/logo_mppe.png' %}" alt="Logo Ministério Público de Pernambuco">
+            <p>Ministério Público de Pernambuco</p>
+        </header>
+
+        <main class="main-content">
+            <h1>SEJA BEM VINDO AO SITE DO DEMPAM!</h1>
+            
+            <div class="button-group">
+                {% comment %}
+                    O Django vai substituir "{% url 'login' %}" pelo link correto
+                    da sua página de login que definimos no urls.py.
+                {% endcomment %}
+                <a href="#" class="btn btn-solicitante">SOLICITANTE</a>
+                <a href="{% url 'login' %}" class="btn btn-admin">ADMINISTRATIVO</a>
+            </div>
+        </main>
+        
+    </div>
+
+</body>
+</html>

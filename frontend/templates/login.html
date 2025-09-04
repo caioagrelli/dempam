@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo - DEMPAM</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="login-logo-section">
+            {% comment %}
+                Certifique-se de exportar o brasão do MPPE e salvar em 'static/images/brasao_mppe.png'
+            {% endcomment %}
+            <img src="{% static 'images/brasao_mppe.png' %}" alt="Brasão do Ministério Público de Pernambuco">
+        </div>
+
+        <div class="login-form-section">
+            <h2>LOGIN</h2>
+            <h3>ADMINISTRATIVO</h3>
+
+            {% comment %}
+                Este é o formulário de login. Ele envia os dados para a URL 'login' do Django.
+            {% endcomment %}
+
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %} {# Linha de segurança OBRIGATÓRIA do Django #}
+
+                {% comment %}
+                    Este bloco de código é um bônus: ele vai mostrar mensagens de erro
+                    do Django se o usuário digitar a senha ou o usuário errado.
+                {% endcomment %}
+
+                {% if form.non_field_errors %}
+                    <div class="form-error">
+                        <p>Usuário ou senha inválidos. Tente novamente.</p>
+                    </div>
+                {% endif %}
+
+                <div class="input-group">
+                    {# O 'name="username"' é ESSENCIAL para o Django entender este campo #}
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-group">
+                    {# O 'name="password"' também é ESSENCIAL #}
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="btn-login">ENTRAR</button>
+            </form>
+
+            <a href="#" class="forgot-password-link">ESQUECEU A SENHA?</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
