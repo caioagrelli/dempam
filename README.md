@@ -12,9 +12,8 @@
 ## 🏗️ Arquitetura do Projeto
 
 O código foi organizado de forma modular para separar as responsabilidades de backend e frontend:
-
+` ````
 sistema-dempam/
-
 ├── backend/
 │   ├── usuarios/
 │   │   ├── templates/
@@ -31,7 +30,7 @@ sistema-dempam/
 │       ├── css/
 │       └── images/
 └── requirements.txt
-
+` ````
 
 ## 🖼️ Galeria de Capturas de Tela
 
