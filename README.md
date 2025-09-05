@@ -2,7 +2,7 @@
 
 ## 👥 Membros da Equipe - Responsabilidades
 
-* **[Caio Agrelli]** – Desenvolvedor Full-Stack (Backend e Frontend), Designer UI/UX
+* **Caio Agrelli** – Desenvolvedor Full-Stack (Backend e Frontend), Designer UI/UX
 
 
 ## 📖 Descrição do Projeto
@@ -14,21 +14,37 @@
 O código foi organizado de forma modular para separar as responsabilidades de backend e frontend:
 
 sistema-dempam/
+
 ├── backend/
+
 │   ├── usuarios/
+
 │   │   ├── templates/
+
 │   │   │   └── usuarios/
+
 │   │   │       ├── homepage.html
+
 │   │   │       └── login.html
+
 │   │   ├── urls.py
+
 │   │   └── views.py
+
 │   ├── backend/
+
 │   │   └── settings.py
+
 │   └── manage.py
+
 ├── frontend/
+
 │   └── static/
+
 │       ├── css/
+
 │       └── images/
+
 └── requirements.txt
 
 
