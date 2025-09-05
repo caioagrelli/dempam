@@ -2,9 +2,8 @@
 
 ## 👥 Membros da Equipe - Responsabilidades
 
-* **[Seu Nome]** – Desenvolvedor Full-Stack (Backend e Frontend), Designer UI/UX
+* **[Caio Agrelli]** – Desenvolvedor Full-Stack (Backend e Frontend), Designer UI/UX
 
-*(Adicione outros membros da equipe se houver)*
 
 ## 📖 Descrição do Projeto
 
@@ -56,51 +55,3 @@ sistema-dempam/
 * **Autenticação e Autorização**
 * **Gerenciamento de Arquivos Estáticos**
 * **Templates com DTL (Django Template Language)**
-
-## ⚠️ Desafios, Erros e Lições Aprendidas
-
-* **❌ Maior Erro:** Erros `404 Not Found` ao carregar arquivos CSS devido à configuração incorreta do `STATICFILES_DIRS` no `settings.py`.
-* **🏔️ Maior Desafio:** Traduzir fielmente o design do Figma para código HTML e CSS responsivo.
-* **📘 Lições Aprendidas:** A importância de ambientes virtuais, a necessidade de reiniciar o servidor após mudanças no `settings.py` e o processo de depuração sistemática.
-
-## 📦 Instalação e Execução
-
-### 1️⃣ Pré-requisitos
-* Python 3.x instalado e configurado no PATH.
-* Git instalado.
-
-### 2️⃣ Clonar o repositório
-```bash
-git clone [LINK PARA O SEU REPOSITÓRIO NO GITHUB]
-cd [NOME-DA-PASTA-DO-PROJETO]
-3️⃣ Criar e ativar o ambiente virtual
-Bash
-
-# Criar o ambiente
-python -m venv venv
-
-# Ativar no Windows PowerShell
-.\venv\Scripts\activate
-4️⃣ Instalar dependências
-Bash
-
-pip install -r requirements.txt
-5️⃣ Preparar o Banco de Dados
-Navegue até a pasta backend:
-
-Bash
-
-cd backend
-python manage.py migrate
-6️⃣ Criar um Superusuário
-Bash
-
-python manage.py createsuperuser
-7️⃣ Executar o projeto
-Bash
-
-python manage.py runserver
-O site estará disponível em http://127.0.0.1:8000/.
-
-📋 Dependências
-Django
